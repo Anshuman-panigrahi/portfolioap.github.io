@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anshuman Panigrahi | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loader.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <div class="loader">
+                <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="chipGradient" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#2d2d2d"></stop>
+                            <stop offset="100%" stop-color="#0f0f0f"></stop>
+                        </linearGradient>
+                        <linearGradient id="textGradient" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#eeeeee"></stop>
+                            <stop offset="100%" stop-color="#888888"></stop>
+                        </linearGradient>
+                        <linearGradient id="pinGradient" x1="1" y1="0" x2="0" y2="0">
+                            <stop offset="0%" stop-color="#bbbbbb"></stop>
+                            <stop offset="50%" stop-color="#888888"></stop>
+                            <stop offset="100%" stop-color="#555555"></stop>
+                        </linearGradient>
+                    </defs>
+                    <g id="traces">
+                        <path d="M100 100 H200 V210 H326" class="trace-bg"></path>
+                        <path d="M100 100 H200 V210 H326" class="trace-flow purple"></path>
+                        <path d="M80 180 H180 V230 H326" class="trace-bg"></path>
+                        <path d="M80 180 H180 V230 H326" class="trace-flow blue"></path>
+                        <path d="M60 260 H150 V250 H326" class="trace-bg"></path>
+                        <path d="M60 260 H150 V250 H326" class="trace-flow yellow"></path>
+                        <path d="M100 350 H200 V270 H326" class="trace-bg"></path>
+                        <path d="M100 350 H200 V270 H326" class="trace-flow green"></path>
+                        <path d="M700 90 H560 V210 H474" class="trace-bg"></path>
+                        <path d="M700 90 H560 V210 H474" class="trace-flow blue"></path>
+                        <path d="M740 160 H580 V230 H474" class="trace-bg"></path>
+                        <path d="M740 160 H580 V230 H474" class="trace-flow green"></path>
+                        <path d="M720 250 H590 V250 H474" class="trace-bg"></path>
+                        <path d="M720 250 H590 V250 H474" class="trace-flow red"></path>
+                        <path d="M680 340 H570 V270 H474" class="trace-bg"></path>
+                        <path d="M680 340 H570 V270 H474" class="trace-flow yellow"></path>
+                    </g>
+                    <rect x="330" y="190" width="140" height="100" rx="20" ry="20" fill="url(#chipGradient)" stroke="#222" stroke-width="3" filter="drop-shadow(0 0 6px rgba(0,0,0,0.8))"></rect>
+                    <g>
+                        <rect x="322" y="205" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                        <rect x="322" y="225" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                        <rect x="322" y="245" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                        <rect x="322" y="265" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                    </g>
+                    <g>
+                        <rect x="470" y="205" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                        <rect x="470" y="225" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                        <rect x="470" y="245" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                        <rect x="470" y="265" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                    </g>
+                    <text x="400" y="240" font-family="Arial, sans-serif" font-size="22" fill="url(#textGradient)" text-anchor="middle" alignment-baseline="middle">Loading</text>
+                    <circle cx="100" cy="100" r="5" fill="black"></circle>
+                    <circle cx="80" cy="180" r="5" fill="black"></circle>
+                    <circle cx="60" cy="260" r="5" fill="black"></circle>
+                    <circle cx="100" cy="350" r="5" fill="black"></circle>
+                    <circle cx="700" cy="90" r="5" fill="black"></circle>
+                    <circle cx="740" cy="160" r="5" fill="black"></circle>
+                    <circle cx="720" cy="250" r="5" fill="black"></circle>
+                    <circle cx="680" cy="340" r="5" fill="black"></circle>
+                </svg>
+            </div>
+            <div class="loading-text">Loading Portfolio<span class="loading-dots">...</span></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#home" class="logo">ANSHUMAN <span>PANIGRAHI</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="theme-toggle">
+            <i class='bx bx-moon' id="theme-icon"></i>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3 class="intro-text">Hello, I'm</h3>
+            <h1 class="main-title">Anshuman <span>Panigrahi</span></h1>
+            <h3 class="text-animation">I'm a <span class="animated-text"></span></h3>
+            <p class="description">I'm a passionate Web Developer with expertise in modern web technologies. My journey with Upgrade has been incredible - I've learned cutting-edge technologies and skills that are shaping my career.</p>
+            <div class="social-icons">
+                <a href="#" class="social-link"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="#" class="social-link"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#" class="social-link"><i class='bx bxl-facebook-square'></i></a>
+                <a href="#" class="social-link"><i class='bx bxl-twitter'></i></a>
+                <a href="#" class="social-link"><i class='bx bxl-github'></i></a>
+            </div>
+            <div class="btn-container">
+                <a href="#contact" class="btn primary-btn">Hire Me</a>
+                <a href="resume.pdf" class="btn secondary-btn" download>Download CV</a>
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="img-container">
+                <img src="web.jpg.png.png" alt="Anshuman Panigrahi">
+                <div class="img-overlay"></div>
+                <div class="floating-shape shape-1"></div>
+                <div class="floating-shape shape-2"></div>
+                <div class="floating-shape shape-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-header">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <p class="section-subtitle">Get to know me better</p>
+        </div>
+        <div class="about-container">
+            <div class="about-img">
+                <img src="web.png2.jpg.jpg" alt="About Anshuman">
+                <div class="experience-badge">
+                    <span>2+</span>
+                    <p> Frontend developement Experience</p>
+                </div>
+            </div>
+            <div class="about-content">
+                <h3>Web Developer & Computer Science Engineer</h3>
+                <p>Hello! I'm Anshuman Panigrahi, a dedicated Web Developer and Computer Science Engineer passionate about creating innovative digital solutions. I specialize in building responsive, user-friendly websites and applications.</p>
+                <div class="about-details">
+                    <div class="detail-item">
+                        <i class='bx bx-check-circle'></i>
+                        <div>
+                            <h4>Strong Problem Solver</h4>
+                            <p>Expert in debugging and creating efficient solutions</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class='bx bx-check-circle'></i>
+                        <div>
+                            <h4>Clean Code Advocate</h4>
+                            <p>Writing maintainable and scalable code</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class='bx bx-check-circle'></i>
+                        <div>
+                            <h4>Continuous Learner</h4>
+                            <p>Always updating skills with latest technologies</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#contact" class="btn primary-btn">Let's Connect</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2 class="section-title">My <span>Services</span></h2>
+            <p class="section-subtitle">What I can do for you</p>
+        </div>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class='bx bx-code-alt'></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Creating responsive, modern websites and web applications using the latest technologies and best practices.</p>
+                <a href="#" class="service-link">Learn More <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class='bx bx-palette'></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Designing intuitive and beautiful user interfaces that provide exceptional user experiences.</p>
+                <a href="#" class="service-link">Learn More <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class='bx bx-mobile-alt'></i>
+                </div>
+                <h3>Mobile Development</h3>
+                <p>Building cross-platform mobile applications that work seamlessly on iOS and Android devices.</p>
+                <a href="#" class="service-link">Learn More <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class='bx bx-server'></i>
+                </div>
+                <h3>Backend Development</h3>
+                <p>Developing robust server-side applications, APIs, and database solutions for scalable web applications.</p>
+                <a href="#" class="service-link">Learn More <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class='bx bx-analyse'></i>
+                </div>
+                <h3>SEO Optimization</h3>
+                <p>Optimizing websites to rank higher in search engine results and drive organic traffic.</p>
+                <a href="#" class="service-link">Learn More <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class='bx bx-support'></i>
+                </div>
+                <h3>Technical Support</h3>
+                <p>Providing maintenance, updates, and technical support for existing websites and applications.</p>
+                <a href="#" class="service-link">Learn More <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="section-header">
+            <h2 class="section-title">My <span>Skills</span></h2>
+            <p class="section-subtitle">Technologies I work with</p>
+        </div>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="95"></div>
+                        </div>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="90"></div>
+                        </div>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="85"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                            <span>React</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="80"></div>
+                        </div>
+                        <span class="skill-percent">60%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Backend</h3>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="70"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="90"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="80"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-header">
+            <h2 class="section-title">My <span>Projects</span></h2>
+            <p class="section-subtitle">Some of my recent work</p>
+        </div>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="E-commerce Website">
+                    <div class="project-overlay">
+                        <a href="#" class="project-link"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>E-commerce Platform</h3>
+                    <p>Full-featured online shopping platform with payment integration</p>
+                    <div class="project-tech">
+                        <span>index.html</span>
+                        <span>anshuman.css</span>
+                        <span>script.js</span>
+                        <span>about.html</span>
+                        <span>service.html</span>
+                        <span>account.html</span>
+                        <span>account.css</span>
+                    </div>
+                </div>
+            </div>
+            <div class="Jarvis assistant">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="AI Interface" alt="Task Management App">
+                    <div class="project-overlay">
+                        <a href="#" class="project-link"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Jarvis ai assistant</h3>
+                    <p>Meet your personal AI assistant. Voice-controlled, always ready to help.</p>
+                    <div class="project-tech">
+                        <span>ap.py</span>
+                        <span>jarvis.py</span>
+                        <span>jarvis2.py</span>
+                    </div>
+                </div>
+           
+                
+            </div>
+        </div>
+        <div class="view-more">
+            <a href="#" class="btn primary-btn">View All Projects</a>
+        </div>
+    </section>
+
+
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <h2 class="section-title">Contact <span>Me</span></h2>
+            <p class="section-subtitle">Let's work together</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                    <div>
+                        <h3>Email</h3>
+                        <p>Panigrahia067@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class='bx bx-phone'></i>
+                    </div>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+91 6371166811</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class='bx bx-map'></i>
+                    </div>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Bhubaneswar, Odisha, India</p>
+                    </div>
+                </div>
+                <div class="social-contact">
+                    <a href="#" class="social-link"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="#" class="social-link"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="#" class="social-link"><i class='bx bxl-facebook-square'></i></a>
+                    <a href="#" class="social-link"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="social-link"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                </form>
+                <div class="form-message" id="formMessage"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>ANSHUMAN <span>PANIGRAHI</span></h2>
+                <p>Passionate Web Developer creating digital experiences</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to my newsletter for latest updates</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit"><i class='bx bx-send'></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Anshuman Panigrahi. All Rights Reserved.</p>
+            <div class="footer-social">
+                <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class='bx bx-chevron-up'></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
